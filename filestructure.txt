@@ -1,0 +1,93 @@
+|-- .eslintrc.js
+|-- .gitignore
+|-- index.html
+|-- package.json
+|-- public
+    |-- favicon.ico
+    |-- index.html
+    |-- logo192.png
+    |-- logo512.png
+    |-- manifest.json
+    |-- robots.txt
+|-- README.md
+|-- src
+    |-- App.css
+    |-- App.js
+    |-- App.jsx
+    |-- assets
+        |-- award01.png
+        |-- award02.png
+        |-- award03.png
+        |-- award05.png
+        |-- bg.png
+        |-- chef.png
+        |-- find.png
+        |-- G.png
+        |-- gallery01.png
+        |-- gallery02.png
+        |-- gallery03.png
+        |-- gallery04.png
+        |-- gericht.png
+        |-- knife.png
+        |-- laurels.png
+        |-- logo.png
+        |-- meal.mp4
+        |-- menu.png
+        |-- overlaybg.png
+        |-- quote.png
+        |-- sign.png
+        |-- spoon.png
+        |-- spoon.svg
+        |-- thukpa.png
+        |-- welcome.png
+    |-- components
+        |-- Footer
+            |-- FooterOverlay.css
+            |-- FooterOverlay.jsx
+            |-- Newsletter.css
+            |-- Newsletter.jsx
+        |-- index.js
+        |-- Menuitem
+            |-- MenuItem.css
+            |-- Menuitem.jsx
+        |-- Navbar
+            |-- Navbar.css
+            |-- Navbar.jsx
+        |-- SubHeading
+            |-- SubHeading.jsx
+    |-- constants
+        |-- data.js
+        |-- images.js
+        |-- index.js
+    |-- container
+        |-- AboutUs
+            |-- AboutUs.css
+            |-- AboutUs.jsx
+        |-- Chef
+            |-- Chef.css
+            |-- Chef.jsx
+        |-- Findus
+            |-- Find.jsx
+        |-- Footer
+            |-- Footer.css
+            |-- Footer.jsx
+        |-- Gallery
+            |-- Gallery.css
+            |-- Gallery.jsx
+        |-- Header
+            |-- Header.css
+            |-- Header.jsx
+        |-- index.js
+        |-- Intro
+            |-- Intro.css
+            |-- Intro.jsx
+        |-- Laurels
+            |-- Laurels.css
+            |-- Laurels.jsx
+        |-- Menu
+            |-- SpecialMenu.css
+            |-- SpecialMenu.jsx
+    |-- index.css
+    |-- index.js
+    |-- index.jsx
+|-- vite.config.js
