@@ -236,4 +236,59 @@ const mainDuck = [
   { title: 'Duck Curry', price: '₹300', tags: 'Duck' },
   { title: 'Duck with Joha Kumura', price: '₹450', tags: 'Duck' },
 ];
-export default { wines, cocktails, bordoloisThalis, nagaThalis, startersVeg, startersNonVeg, breadsRoti, breadsNaan, breadsKulcha, breadsParatha, mainVeg, mainNonVeg, mainPork, mainFish, mainMutton, mainDuck, awards };
+
+// Rice & Noodles section
+const rice = [
+  { title: 'Steam Rice', price: '₹60', tags: 'Rice' },
+  { title: 'Veg Fried Rice', price: '₹70', tags: 'Rice' },
+  { title: 'Veg Pulao', price: '₹90', tags: 'Rice' },
+  { title: 'Jeera Rice', price: '₹120', tags: 'Rice' },
+  { title: 'Chicken Fried Rice', price: '₹140', tags: 'Rice' },
+  { title: 'Pork Fried Rice', price: '₹150', tags: 'Rice' },
+];
+
+const noodles = [
+  { title: 'Veg Hakka Noodles', price: '₹80', tags: 'Noodles' },
+  { title: 'Chicken Chowmein', price: '₹120', tags: 'Noodles' },
+  { title: 'Pork Chowmein', price: '₹150', tags: 'Noodles' },
+  { title: 'Special Mix Chowmein', price: '₹180', tags: 'Noodles' },
+];
+
+const rolls = [
+  { title: 'Veg Roll', price: '₹50', tags: 'Rolls' },
+  { title: 'Paneer Roll', price: '₹80', tags: 'Rolls' },
+  { title: 'Egg Roll', price: '₹70', tags: 'Rolls' },
+  { title: 'Chicken Roll', price: '₹100', tags: 'Rolls' },
+  { title: 'Pork Roll', price: '₹120', tags: 'Rolls' },
+  { title: 'Double Egg Roll', price: '₹90', tags: 'Rolls' },
+  { title: 'Bordoloi’s Special Roll', price: '₹140', tags: 'Rolls' },
+];
+
+const momo = [
+  { title: 'Steamed Momo (Veg/Chicken/Pork)', price: '₹60/90/120', tags: 'Momo' },
+  { title: 'Cheese Momo (Veg/Chicken/Pork)', price: '₹80/100/130', tags: 'Momo' },
+  { title: 'Pan Fried Momo (Veg/Chicken/Pork)', price: '₹90/110/130', tags: 'Momo' },
+];
+
+const thukpa = [
+  { title: 'Veg Thukpa', price: '₹80', tags: 'Thukpa' },
+  { title: 'Chicken Thukpa', price: '₹120', tags: 'Thukpa' },
+  { title: 'Pork Thukpa', price: '₹140', tags: 'Thukpa' },
+  { title: 'Mix Thukpa', price: '₹150', tags: 'Thukpa' },
+];
+
+const biryani = [
+  { title: 'Chicken Dum Biryani', price: '₹220', tags: 'Biryani' },
+  { title: 'Mutton Dum Biryani', price: '₹300', tags: 'Biryani' },
+];
+
+const beverages = [
+  { title: 'Tea', price: '₹30', tags: 'Beverage' },
+  { title: 'Hot Coffee', price: '₹50', tags: 'Beverage' },
+  { title: 'Cold Coffee', price: '₹70', tags: 'Beverage' },
+  { title: 'Fresh Lime Soda', price: '₹60', tags: 'Beverage' },
+  { title: 'Mojito', price: '₹80', tags: 'Beverage' },
+  { title: 'Blue Lagoon', price: '₹100', tags: 'Beverage' },
+];
+
+export default { wines, cocktails, bordoloisThalis, nagaThalis, startersVeg, startersNonVeg, breadsRoti, breadsNaan, breadsKulcha, breadsParatha, mainVeg, mainNonVeg, mainPork, mainFish, mainMutton, mainDuck, rice, noodles, rolls, momo, thukpa, biryani, beverages, awards };

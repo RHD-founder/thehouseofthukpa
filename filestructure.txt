@@ -1,6 +1,7 @@
 |-- .eslintrc.js
 |-- .gitignore
 |-- index.html
+|-- package-lock.json
 |-- package.json
 |-- public
     |-- favicon.ico
@@ -53,10 +54,14 @@
         |-- Navbar
             |-- Navbar.css
             |-- Navbar.jsx
+        |-- OrderSummary
+            |-- OrderSummary.css
+            |-- OrderSummary.jsx
         |-- SubHeading
             |-- SubHeading.jsx
     |-- constants
         |-- data.js
+        |-- data_thukpa.js
         |-- images.js
         |-- index.js
     |-- container

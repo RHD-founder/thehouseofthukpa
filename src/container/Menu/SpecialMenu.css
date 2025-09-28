@@ -1,6 +1,73 @@
 .app__specialMenu {
+    position: relative;
     flex-direction: column;
     background: var(--color-black);
+    padding-bottom: 4rem;
+}
+
+/* Order Summary Styling */
+.app__specialMenu-orderSummary {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    max-width: 400px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    background: var(--color-black);
+    border: 1px solid var(--color-golden);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+/* Floating cart button */
+.floating-cart-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: var(--color-golden);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 999;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.floating-cart-btn:hover {
+    transform: scale(1.1);
+}
+
+.cart-icon {
+    font-size: 24px;
+    color: var(--color-black);
+}
+
+.cart-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: var(--color-crimson);
+    color: white;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Add some padding to the bottom of the menu to account for fixed order summary */
+.app__specialMenu {
+    padding-bottom: 100px;
 }
 
 .app__specialMenu-title {
@@ -11,20 +78,35 @@
 .app__specialMenu-menu {
     width: 100%;
     margin: 2rem 0;
-
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-direction: row;
 }
 
-.app__specialMenu-menu_heading {
+  .app__specialMenu-menu_heading {
     font-family: var(--font-base);
     font-weight: 600;
     font-size: 45px;
     line-height: 58.5px;
     letter-spacing: 0.04em;
     color: var(--color-white);
+  }
+
+/* Generic: center all section titles and give spacing below */
+.app__specialMenu-menu .app__specialMenu-menu_heading {
+    text-align: center;
+    width: 100%;
+    display: block;
+    margin-bottom: 1.5rem;
+}
+
+/* Generic header wrapper to ensure headings sit above content and centered */
+.app__specialMenu-section_header {
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin-bottom: 1.5rem;
 }
 
 .app__specialMenu-menu_wine,
@@ -48,13 +130,13 @@
     flex-direction: column;
 }
 
-/* Ensure Starters section stacks title then subcategories */
+/* Starters section layout */
 .app__specialMenu-menu_starters {
     flex: 1;
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
 }
 
 /* Space below the main title within Starters */
@@ -73,26 +155,86 @@
     flex-direction: column;
 }
 
-.app__specialMenu-menu_breads .app__specialMenu-menu_heading {
-    margin-bottom: 1.5rem;
-    text-align: center;
-    width: 100%;
-    display: block;
-}
-
-/* Main Course section layout and centered title */
-.app__specialMenu-menu_main {
+/* Thukpa sections container: stack title above content */
+.app__specialMenu-menu_thukpa {
     flex: 1;
     width: 100%;
     display: flex;
     flex-direction: column;
 }
 
+/* Main Course section layout */
+.app__specialMenu-menu_main {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Main Course section layout and centered title */
 .app__specialMenu-menu_main .app__specialMenu-menu_heading {
     margin-bottom: 1.5rem;
     text-align: center;
     width: 100%;
     display: block;
+}
+
+.app__specialMenu-menu_main .app__specialMenu-menu_row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    width: 100%;
+}
+
+/* For medium screens, show 2 columns */
+@media screen and (max-width: 1150px) {
+    .app__specialMenu-menu_main .app__specialMenu-menu_row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* For small screens, stack to 1 column */
+@media screen and (max-width: 650px) {
+    .app__specialMenu-menu_main .app__specialMenu-menu_row {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Thukpa sections container: stack title above content */
+.app__specialMenu-menu_riceNoodles {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.app__specialMenu-menu_riceNoodles .app__specialMenu-menu_heading {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    width: 100%;
+    display: block;
+}
+
+/* Thukpa sections: ensure title is clearly visible and above items */
+.app__specialMenu-menu_thukpa .app__specialMenu-menu_heading {
+    color: var(--color-golden) !important;
+    margin: 0 0 1.5rem;
+    text-align: center;
+    width: 100%;
+    display: block;
+    font-weight: 700;
+    visibility: visible;
+    opacity: 1;
+    position: relative;
+    z-index: 2;
+}
+
+.app__specialMenu-menu_riceNoodles .app__specialMenu-menu_row {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem;
+    width: 100%;
 }
 
 .app__specialMenu-menu_img {
@@ -163,6 +305,20 @@
         flex-direction: column;
         gap: 1.5rem;
     }
+
+    /* Main Course: use 2 columns on medium screens */
+    .app__specialMenu-menu_main .app__specialMenu-menu_row {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.5rem;
+    }
+
+    /* Rice & Noodles: use 2 columns on medium screens */
+    .app__specialMenu-menu_riceNoodles .app__specialMenu-menu_row {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.5rem;
+    }
 }
 
 @media screen and (max-width: 650px) {
@@ -174,4 +330,46 @@
         font-size: 35px;
         line-height: 48.5px;
     }
+
+    /* Main Course: stack to 1 column on small screens */
+    .app__specialMenu-menu_main .app__specialMenu-menu_row {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    /* Rice & Noodles: stack to 1 column on small screens */
+    .app__specialMenu-menu_riceNoodles .app__specialMenu-menu_row {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
+/* Brand toggle styles */
+.app__specialMenu-toggle {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0 2rem;
+}
+
+.toggle__btn {
+    background: transparent;
+    color: var(--color-white);
+    border: 1px solid var(--color-golden);
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.toggle__btn:hover {
+    background: rgba(255, 215, 0, 0.1);
+}
+
+.toggle__btn.active {
+    background: var(--color-golden);
+    color: var(--color-black);
 }
