@@ -11,8 +11,18 @@
   ],
   "routes": [
     {
-      "src": "/(.*)",
+      "src": "^/assets/(.*)",
+      "dest": "/assets/$1"
+    },
+    {
+      "src": "^/thehouseofthukpa/(.*)",
+      "dest": "/thehouseofthukpa/$1"
+    },
+    {
+      "src": "^/(.*)",
       "dest": "/index.html"
     }
-  ]
+  ],
+  "buildCommand": "npm run build:prod",
+  "outputDirectory": "dist"
 }
