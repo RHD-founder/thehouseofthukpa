@@ -7,16 +7,13 @@
     <meta name="theme-color" content="#000000" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <title>Thukpa - Authentic Himalayan Cuisine</title>
-    <base href="/thehouseofthukpa/" />
+    <base href="/" />
     <script>
-      // This script helps with client-side routing in production
+      // Set base href based on current path
       (function() {
-        const base = document.querySelector('base');
         const path = window.location.pathname;
         if (path.startsWith('/thehouseofthukpa/')) {
-          base.href = '/thehouseofthukpa/';
-        } else {
-          base.href = '/';
+          document.querySelector('base').href = '/thehouseofthukpa/';
         }
       })();
     </script>
