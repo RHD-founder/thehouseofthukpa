@@ -95,4 +95,5 @@
     |-- index.css
     |-- index.js
     |-- index.jsx
+|-- vercel.json
 |-- vite.config.js
