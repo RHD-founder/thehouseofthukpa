@@ -55,11 +55,33 @@ const MenuItem = ({ title, price, tags, onAddToOrder }) => {
               handleQuantityChange(quantity - 1);
             }}
             className="quantity-btn"
+            disabled={quantity <= 0}
             aria-label="Decrease quantity"
+            style={{
+              width: '30px',
+              height: '30px',
+              minWidth: '30px',
+              padding: 0,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              border: '1px solid var(--color-golden)',
+              background: 'transparent',
+              color: 'var(--color-white)',
+              borderRadius: '4px',
+              cursor: 'pointer',
+              fontSize: '16px',
+              transition: 'all 0.3s ease'
+            }}
           >
-            <FaMinus />
+            <FaMinus size={12} />
           </button>
-          <span className="quantity">{quantity}</span>
+          <span className="quantity" style={{
+            minWidth: '20px',
+            textAlign: 'center',
+            fontFamily: 'var(--font-base)',
+            color: 'var(--color-white)'
+          }}>{quantity}</span>
           <button 
             onClick={(e) => {
               e.stopPropagation();
@@ -67,8 +89,24 @@ const MenuItem = ({ title, price, tags, onAddToOrder }) => {
             }}
             className="quantity-btn"
             aria-label="Increase quantity"
+            style={{
+              width: '30px',
+              height: '30px',
+              minWidth: '30px',
+              padding: 0,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              border: '1px solid var(--color-golden)',
+              background: 'transparent',
+              color: 'var(--color-white)',
+              borderRadius: '4px',
+              cursor: 'pointer',
+              fontSize: '16px',
+              transition: 'all 0.3s ease'
+            }}
           >
-            <FaPlus />
+            <FaPlus size={12} />
           </button>
         </div>
         <button 
@@ -78,6 +116,30 @@ const MenuItem = ({ title, price, tags, onAddToOrder }) => {
           }}
           className={`add-to-order-btn ${isAdded ? 'added' : ''}`}
           aria-label="Add to order"
+          style={{
+            flex: '1',
+            minWidth: '120px',
+            maxWidth: '200px',
+            height: '40px',
+            padding: '0 16px',
+            margin: 0,
+            border: 'none',
+            borderRadius: '4px',
+            fontFamily: 'var(--font-base)',
+            fontWeight: '600',
+            fontSize: '14px',
+            cursor: 'pointer',
+            transition: 'all 0.3s ease',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: '8px',
+            whiteSpace: 'nowrap',
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
+            backgroundColor: isAdded ? '#4caf50' : 'var(--color-golden)',
+            color: isAdded ? 'white' : 'var(--color-black)'
+          }}
         >
           {isAdded ? '✓ Added' : 'Add to Order'}
         </button>

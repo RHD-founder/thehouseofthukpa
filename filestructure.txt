@@ -45,8 +45,6 @@
         |-- Footer
             |-- FooterOverlay.css
             |-- FooterOverlay.jsx
-            |-- Newsletter.css
-            |-- Newsletter.jsx
         |-- index.js
         |-- Menuitem
             |-- MenuItem.css
@@ -68,9 +66,6 @@
         |-- AboutUs
             |-- AboutUs.css
             |-- AboutUs.jsx
-        |-- Chef
-            |-- Chef.css
-            |-- Chef.jsx
         |-- Findus
             |-- Find.jsx
         |-- Footer
@@ -86,9 +81,6 @@
         |-- Intro
             |-- Intro.css
             |-- Intro.jsx
-        |-- Laurels
-            |-- Laurels.css
-            |-- Laurels.jsx
         |-- Menu
             |-- SpecialMenu.css
             |-- SpecialMenu.jsx

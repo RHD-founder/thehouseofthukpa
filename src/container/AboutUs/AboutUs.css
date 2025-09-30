@@ -71,11 +71,46 @@
     .app__aboutus-content_knife {
         margin: 4rem 0;
     }
+    
+    .app__aboutus-content_about,
+    .app__aboutus-content_history {
+        align-items: center;
+        text-align: center;
+    }
+    
+    .app__aboutus-content_about p,
+    .app__aboutus-content_history p {
+        text-align: justify;
+        text-justify: inter-word;
+    }
+    
+    .app__aboutus-content_about .spoon__img,
+    .app__aboutus-content_history .spoon__img {
+        margin: 0.5rem auto;
+    }
 }
 
 @media screen and (max-width: 650px) {
     .app__aboutus-overlay img {
         width: 80%;
         height: 320px;
+    }
+    
+    .app__aboutus-content_about h1,
+    .app__aboutus-content_history h1 {
+        text-align: center;
+        width: 100%;
+    }
+    
+    .app__aboutus-content_about p,
+    .app__aboutus-content_history p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        padding: 0 1rem;
+    }
+    
+    .app__aboutus-content_about .custom__button,
+    .app__aboutus-content_history .custom__button {
+        margin: 1rem auto;
     }
 }

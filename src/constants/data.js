@@ -88,30 +88,7 @@ const bordoloisThalis = [
     title: 'Bordoloi’s Special Thali',
     price: '₹550.00',
     tags: 'Joha Rice | Yellow Dal | Mati Dal | Mix Veg | Aloo Bhaji | Aloo Pitika | Omita Khar | Chatni | Seasonal Greens Fry | Papad | Salad | Kheer | (Local Chicken with Kol Posala | Chicken Khorika | Chicken Pitika / Til Pork | Pork Khorika | Pork Pitika)',
-  },
-];
-
-const awards = [
-  {
-    imgUrl: images.award02,
-    title: 'Bib Gourmond',
-    subtitle: 'Lorem ipsum dolor sit amet, consectetur.',
-  },
-  {
-    imgUrl: images.award01,
-    title: 'Rising Star',
-    subtitle: 'Lorem ipsum dolor sit amet, consectetur.',
-  },
-  {
-    imgUrl: images.award05,
-    title: 'AA Hospitality',
-    subtitle: 'Lorem ipsum dolor sit amet, consectetur.',
-  },
-  {
-    imgUrl: images.award03,
-    title: 'Outstanding Chef',
-    subtitle: 'Lorem ipsum dolor sit amet, consectetur.',
-  },
+  }
 ];
 
 // Authentic Naga Thali menu
@@ -291,4 +268,4 @@ const beverages = [
   { title: 'Blue Lagoon', price: '₹100', tags: 'Beverage' },
 ];
 
-export default { wines, cocktails, bordoloisThalis, nagaThalis, startersVeg, startersNonVeg, breadsRoti, breadsNaan, breadsKulcha, breadsParatha, mainVeg, mainNonVeg, mainPork, mainFish, mainMutton, mainDuck, rice, noodles, rolls, momo, thukpa, biryani, beverages, awards };
+export default { wines, cocktails, bordoloisThalis, nagaThalis, startersVeg, startersNonVeg, breadsRoti, breadsNaan, breadsKulcha, breadsParatha, mainVeg, mainNonVeg, mainPork, mainFish, mainMutton, mainDuck, rice, noodles, rolls, momo, thukpa, biryani, beverages };

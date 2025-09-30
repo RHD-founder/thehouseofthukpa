@@ -1,14 +1,14 @@
 import React from 'react';
-import { FiFacebook, FiTwitter, FiInstagram } from 'react-icons/fi';
+import { FiFacebook, FiInstagram } from 'react-icons/fi';
 
-import { FooterOverlay, Newsletter } from '../../components';
+import { FooterOverlay} from '../../components';
 import { images } from '../../constants';
 import './Footer.css';
 
 const Footer = () => (
   <div className="app__footer section__padding" id="login">
     <FooterOverlay />
-    <Newsletter />
+
 
     <div className="app__footer-links">
       <div className="app__footer-links_contact">
@@ -32,9 +32,12 @@ const Footer = () => (
           style={{ marginTop: 15 }}
         />
         <div className="app__footer-links_icons">
-          <FiFacebook />
-          <FiTwitter />
-          <FiInstagram />
+          <a href="https://www.facebook.com/people/House-of-Thukpa/61579092546809/" target="_blank" rel="noopener noreferrer">
+            <FiFacebook />
+          </a>
+          <a href="https://www.instagram.com/thukpa2025/" target="_blank" rel="noopener noreferrer">
+            <FiInstagram />
+          </a>
         </div>
       </div>
 

@@ -1,19 +1,15 @@
 import React from 'react';
-import { 
+import {
   AboutUs,
-  Chef,
   Find,
   Footer,
   Gallery,
   Header,
   Intro,
-  Laurels,
   SpecialMenu,
 } from './container';
 import { Navbar } from './components';
 import './App.css';
-
-// Simple error boundary component
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -43,9 +39,7 @@ const App = () => (
       <Header />
       <AboutUs />
       <SpecialMenu />
-      <Chef />
       <Intro />
-      <Laurels />
       <Gallery />
       <Find />
       <Footer />
