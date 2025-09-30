@@ -29,16 +29,19 @@
         |-- gallery03.png
         |-- gallery04.png
         |-- gericht.png
+        |-- house.webp
         |-- knife.png
         |-- laurels.png
         |-- logo.png
         |-- meal.mp4
         |-- menu.png
+        |-- momo.webp
         |-- overlaybg.png
         |-- quote.png
         |-- sign.png
         |-- spoon.png
         |-- spoon.svg
+        |-- thukpa-.webp
         |-- thukpa.png
         |-- welcome.png
     |-- components
