@@ -273,9 +273,7 @@ const OrderSummary = ({ orderItems, onRemoveItem, onUpdateQuantity, onClearOrder
             <button 
               onClick={(e) => {
                 e.stopPropagation();
-                if (window.confirm('Are you sure you want to clear your order?')) {
-                  onClearOrder();
-                }
+                onClearOrder();
               }}
               className="clear-btn"
               disabled={orderItems.length === 0}

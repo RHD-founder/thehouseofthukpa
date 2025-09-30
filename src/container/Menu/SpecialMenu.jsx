@@ -110,37 +110,65 @@ const SpecialMenu = () => {
 
   // Clear entire order
   const handleClearOrder = () => {
-    if (window.confirm('Are you sure you want to clear your cart?')) {
-      setOrderItems([]);
-      toast.info('Cart cleared', {
+    setOrderItems([]);
+    toast(
+      <div className="custom-toast">
+        <span style={{color: '#DCCA87'}}>✓</span> Cart cleared
+      </div>,
+      {
         position: "bottom-right",
         autoClose: 2000,
-        hideProgressBar: false,
+        hideProgressBar: true,
+        closeButton: false,
+        style: toastStyle,
         closeOnClick: true,
         pauseOnHover: true,
-        draggable: true
-      });
-    }
+        draggable: true,
+        className: 'custom-toast-container'
+      }
+    );
   };
 
   // Handle order placement
   const handlePlaceOrder = async (orderDetails) => {
     try {
-      // Here you would typically send the order to your backend
-      console.log('Order details:', orderDetails);
+      // Format order details for WhatsApp
+      const orderSummary = orderItems.map(item => 
+        `${item.quantity}x ${item.title} - ₹${priceNumber(item.price).toFixed(2)}`
+      ).join('%0A');
       
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      const totalAmount = orderItems.reduce((total, item) => 
+        total + (priceNumber(item.price) * item.quantity), 0
+      );
+      
+      const whatsappMessage = `*New Order*%0A%0A` +
+        `*Order Details:*%0A${orderSummary}%0A%0A` +
+        `*Total Amount:* ₹${totalAmount.toFixed(2)}%0A` +
+        `*Customer Name:* ${orderDetails.name}%0A` +
+        `*Phone:* ${orderDetails.phone}%0A` +
+        `*Address:* ${orderDetails.address}%0A` +
+        `*Payment Method:* ${orderDetails.paymentMethod}`;
+      
+      // Open WhatsApp with the order details
+      window.open(`https://api.whatsapp.com/send/?phone=919395970019&text=${whatsappMessage}`, '_blank');
       
       // Show success message
-      toast.success('Order placed successfully!', {
-        position: "bottom-right",
-        autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true
-      });
+      toast(
+        <div className="custom-toast">
+          <span style={{color: '#DCCA87'}}>✓</span> Order placed successfully!
+        </div>,
+        {
+          position: "bottom-right",
+          autoClose: 3000,
+          hideProgressBar: true,
+          closeButton: false,
+          style: toastStyle,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          className: 'custom-toast-container'
+        }
+      );
       
       // Clear the cart after successful order
       setOrderItems([]);
