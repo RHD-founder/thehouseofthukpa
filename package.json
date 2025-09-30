@@ -17,7 +17,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "vercel-build": "vite build --mode production",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "build:prod": "vite build --mode production"
   },
   "browserslist": {
@@ -34,6 +35,8 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.2.0",
+    "gh-pages": "^5.0.0",
+    "terser": "^5.44.0",
     "vite": "^4.4.11"
   },
   "engines": {

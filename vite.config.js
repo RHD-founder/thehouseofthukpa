@@ -2,60 +2,53 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
 
-// https://vitejs.dev/config/
-export default defineConfig(({ mode }) => {
-  const isProduction = mode === 'production';
-  
-  return {
-    plugins: [react()],
-    base: isProduction ? '/thehouseofthukpa/' : '/',
-    define: {
-      'process.env': {}
+export default defineConfig({
+  plugins: [react()],
+  base: '/',
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
     },
-    resolve: {
-      alias: {
-        '@': path.resolve(__dirname, './src'),
-      },
-    },
-    build: {
-      outDir: 'dist',
-      emptyOutDir: true,
-      sourcemap: true,
-      minify: 'esbuild',
-      rollupOptions: {
-        output: {
-          manualChunks: {
-            react: ['react', 'react-dom'],
-            vendor: ['react-icons']
-          }
-        },
-        onwarn(warning, warn) {
-          if (warning.code === 'MODULE_LEVEL_DIRECTIVE') {
-            return;
-          }
-          warn(warning);
+  },
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+    emptyOutDir: true,
+    sourcemap: false,
+    minify: 'terser',
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          react: ['react', 'react-dom'],
+          vendor: ['react-icons']
         }
       },
-      commonjsOptions: {
-        transformMixedEsModules: true,
-      },
+      onwarn(warning, warn) {
+        if (warning.code === 'MODULE_LEVEL_DIRECTIVE') {
+          return;
+        }
+        warn(warning);
+      }
     },
-    server: {
-      port: 3000,
-      open: true,
-      host: true,
-      hmr: {
-        overlay: true,
-      },
-    },
-    esbuild: {
-      logOverride: { 'this-is-undefined-in-esm': 'silent' }
-    },
-    optimizeDeps: {
-      include: ['react', 'react-dom'],
-      esbuildOptions: {
-        target: 'es2020',
-      },
+    commonjsOptions: {
+      transformMixedEsModules: true,
     }
-  };
+  },
+  server: {
+    port: 3000,
+    open: true,
+    host: true,
+    hmr: {
+      overlay: true,
+    },
+  },
+  esbuild: {
+    logOverride: { 'this-is-undefined-in-esm': 'silent' }
+  },
+  optimizeDeps: {
+    include: ['react', 'react-dom'],
+    esbuildOptions: {
+      target: 'es2020',
+    },
+  }
 });
