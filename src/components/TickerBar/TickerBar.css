@@ -1,0 +1,29 @@
+.app__tickerbar {
+  width: 100%;
+  background-color: var(--color-black);
+  color: var(--color-golden);
+  padding: 0.5rem 0;
+  position: relative;
+  z-index: 5;
+  text-align: center;
+}
+
+.app__tickerbar-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app__tickerbar-content span {
+  font-family: var(--font-alt);
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: var(--color-golden);
+}
+
+@media screen and (max-width: 650px) {
+  .app__tickerbar-content span {
+    font-size: 0.8rem;
+  }
+}

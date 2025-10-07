@@ -34,6 +34,7 @@
         |-- laurels.png
         |-- logo.png
         |-- meal.mp4
+        |-- meat.png
         |-- menu.png
         |-- momo.webp
         |-- overlaybg.png
@@ -60,6 +61,9 @@
             |-- OrderSummary.jsx
         |-- SubHeading
             |-- SubHeading.jsx
+        |-- TickerBar
+            |-- TickerBar.css
+            |-- TickerBar.jsx
     |-- constants
         |-- data.js
         |-- data_thukpa.js

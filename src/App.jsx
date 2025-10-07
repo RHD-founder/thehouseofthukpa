@@ -8,7 +8,7 @@ import {
   Intro,
   SpecialMenu,
 } from './container';
-import { Navbar } from './components';
+import { Navbar, TickerBar } from './components';
 import './App.css';
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -35,6 +35,7 @@ class ErrorBoundary extends React.Component {
 const App = () => (
   <div className="app">
     <ErrorBoundary>
+      <TickerBar />
       <Navbar />
       <Header />
       <AboutUs />
